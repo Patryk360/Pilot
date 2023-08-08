@@ -58,6 +58,7 @@
         <Compile Include="MainActivity.cs"/>
         <Compile Include="Resources\Resource.Designer.cs"/>
         <Compile Include="Properties\AssemblyInfo.cs"/>
+        <Compile Include="WebSocket.cs" />
     </ItemGroup>
     <ItemGroup>
         <None Include="Resources\AboutResources.txt"/>
@@ -72,10 +73,12 @@
         <AndroidResource Include="Resources\values\ic_launcher_background.xml"/>
         <AndroidResource Include="Resources\values\strings.xml"/>
         <AndroidResource Include="Resources\values\styles.xml"/>
+        <AndroidResource Include="Resources\xml\network_security_config.xml">
+          <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+        </AndroidResource>
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="System.Net.WebSockets" Version="4.3.0" />
-        <PackageReference Include="System.Net.WebSockets.Client" Version="4.3.2" />
+        <PackageReference Include="WebSocketSharp-netstandard" Version="1.0.1" />
         <PackageReference Include="Xamarin.Android.Support.Design" Version="28.0.0.3"/>
     </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets"/>
